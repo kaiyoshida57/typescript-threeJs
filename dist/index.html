@@ -8,17 +8,17 @@
 		<meta name="keywords" content="" />
 		<meta
 			name="description"
-			content="TypeScriptの練習としてThreeJSを用いて作成したページです。"
+			content="TypeScriptの練習としてThree.jsを用いて3Dを作成したページ"
 		/>
 		<meta property="og:url" content="" />
-		<meta property="og:title" content="TypeScriptでThreeJS" />
+		<meta property="og:title" content="TypeScriptでThree.js" />
 		<meta property="og:type" content="website" />
 		<meta
 			property="og:description"
-			content="TypeScriptの練習としてThreeJSを用いて作成したページです。"
+			content="TypeScriptの練習としてThree.jsを用いて3Dを作成したページ"
 		/>
 		<meta property="og:image" content="" />
-		<meta property="og:site_name" content="TypeScriptでThreeJS" />
+		<meta property="og:site_name" content="TypeScriptでThree.js" />
 		<meta property="og:locale" content="ja_JP" />
 		<link rel="icon" href="" sizes="32x32" type="image/png" />
 		<link rel="apple-touch-icon-precomposed" href="" sizes="180x180" />
@@ -32,12 +32,28 @@
 		<!-- <link rel="stylesheet" href="./src/scss/common/common.scss"> -->
 		<script defer src="main.js"></script>
 	</head>
-	<body>
+	<body class="body">
 		<div class="wrapper">
 			<h1 class="text">
-				TypeScriptの練習としてThreeJSを用いて作成したページです！
+				TypeScriptの練習としてThree.jsを用いて3Dを作成したページです！
 			</h1>
 			<canvas id="myCanvas" class="myCanvas"></canvas>
+			<ul class="control-list">
+				<li class="control-list__item">
+					<button type="button" class="control-list__btn stopOrStart is-stop">
+						回転させる
+					</button>
+					<button type="button" class="control-list__btn fast">
+						回転を早める
+					</button>
+					<button type="button" class="control-list__btn slowly">
+						回転を逆に早める
+					</button>
+				</li>
+				<li>
+					<p class="voice"></p>
+				</li>
+			</ul>
 		</div>
 	</body>
 </html>
