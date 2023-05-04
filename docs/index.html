@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Topページ</title>
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="" />
+		<meta
+			name="description"
+			content="TypeScriptの練習としてThree.jsを用いて3Dを作成したページ"
+		/>
+		<meta property="og:url" content="" />
+		<meta property="og:title" content="TypeScriptでThree.js" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:description"
+			content="TypeScriptの練習としてThree.jsを用いて3Dを作成したページ"
+		/>
+		<meta property="og:image" content="" />
+		<meta property="og:site_name" content="TypeScriptでThree.js" />
+		<meta property="og:locale" content="ja_JP" />
+		<link rel="icon" href="" sizes="32x32" type="image/png" />
+		<link rel="apple-touch-icon-precomposed" href="" sizes="180x180" />
+		<link rel="shortcut icon" href="" type="image/svg+xml" sizes="any" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Roboto+Condensed:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- <link rel="stylesheet" href="./src/scss/common/common.scss"> -->
+		<script defer src="main.js"></script>
+	</head>
+	<body class="body">
+		<div class="wrapper">
+			<h1 class="text">
+				TypeScriptの練習としてThree.jsを用いて3Dを作成したページです！
+			</h1>
+			<canvas id="myCanvas" class="myCanvas"></canvas>
+			<ul class="control-list">
+				<li class="control-list__item">
+					<button type="button" class="control-list__btn stopOrStart is-stop">
+						回転させる
+					</button>
+					<button type="button" class="control-list__btn fast">
+						回転を早める
+					</button>
+					<button type="button" class="control-list__btn slowly">
+						回転を逆に早める
+					</button>
+				</li>
+				<li>
+					<p class="voice"></p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
