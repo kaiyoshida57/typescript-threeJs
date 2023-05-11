@@ -59,13 +59,14 @@ export default function init() {
 	}
 
 	// ★TSでは、以下のようにtypeで型命名し、関数などに適用すると分かりやすい。似たものとしてinterfaceというオブジェクトの型として命名できる方法もある。
+	// ちなみに message?: string, のようにすれば省略可能なプロパティにできる。
 	type animOpt = (
 		message: string, // 出力文言
 		applyNumber: number // 回転数
 	) => void;
 
-	// 早める/遅らす場合に実行されるイベント
-	const tickFastSlowly: animOpt = (mes, num) => {
+	// 早める/逆に早める場合に実行されるイベント
+	const tickFastReverse: animOpt = (mes, num) => {
 		if (num > 0) {
 			box.rotation.y += num;
 			isReverse = false;
@@ -88,7 +89,7 @@ export default function init() {
 		".stopOrStart"
 	) as HTMLButtonElement;
 	const btnFast = document.querySelector(".fast") as HTMLButtonElement;
-	const btnSlowly = document.querySelector(".slowly") as HTMLButtonElement;
+	const btnReverse = document.querySelector(".reverse") as HTMLButtonElement;
 
 	// *** 止めるボタン ***
 	if (btnStopStart) {
@@ -115,14 +116,14 @@ export default function init() {
 	// *** 早めるボタン ***
 	if (btnFast) {
 		btnFast.addEventListener("click", () => {
-			tickFastSlowly("早めました！", 0.05);
+			tickFastReverse("早めました！", 0.05);
 		});
 	}
 
-	// *** 遅らすボタン ***
-	if (btnSlowly) {
-		btnSlowly.addEventListener("click", () => {
-			tickFastSlowly("逆に早めました！", -0.05);
+	// *** 逆に早めるボタン ***
+	if (btnReverse) {
+		btnReverse.addEventListener("click", () => {
+			tickFastReverse("逆に早めました！", -0.05);
 		});
 	}
 }
